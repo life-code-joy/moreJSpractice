@@ -65,3 +65,5 @@ for (const mov of businessFundsTaiwan) {
 }
 
 console.log(newFundsTaiwan);
+
+cond1('hongkongIntlBank', 'china');
