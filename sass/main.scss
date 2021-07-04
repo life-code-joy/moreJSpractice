@@ -1,0 +1,34 @@
+@import './mixin';
+@import './variables';
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 100;
+}
+
+body {
+  font-family: inherit;
+  background-color: $main-color;
+}
+.nav {
+  @include grid(repeat(4, 1fr), 4fr);
+  @include style-one(2rem, 0, $main-color, 0);
+  color: rgb(216, 216, 216);
+  justify-content: center;
+  align-content: center;
+}
+.header {
+  h2 {
+    padding: 2rem;
+  }
+  div {
+    @include grid(repeat(4, 1fr), 4fr);
+  }
+}
+.aside {
+  @include grid(repeat(4, 1fr), 4fr);
+}
+.footer {
+  @include grid(repeat(4, 1fr), 4fr);
+}

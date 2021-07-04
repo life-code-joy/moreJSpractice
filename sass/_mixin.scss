@@ -1,0 +1,12 @@
+@mixin style-one($pad, $line-height, $bgc, $margin) {
+  padding: $pad;
+  line-height: $line-height;
+  background-color: $bgc;
+  margin: $margin;
+}
+
+@mixin grid($columns, $rows) {
+  display: grid;
+  grid-template-columns: $columns;
+  grid-template-rows: $rows;
+}
