@@ -5,6 +5,8 @@ import {
   businessFundsBrazil,
 } from './arrayStuff.js';
 import { cond1 } from './moreStuff.js';
+
+import * as AM from './arrMethods.js';
 console.log(businessFundsJapan, businessFundsTaiwan, businessFundsBrazil);
 console.log(funAcivities2);
 funAcivities2.prettyFun('fred');
@@ -67,3 +69,16 @@ for (const mov of businessFundsTaiwan) {
 console.log(newFundsTaiwan);
 
 cond1('hongkongIntlBank', 'china');
+
+const accountTotal = newFundsTaiwan.reduce((acc, cur, i, arr) => {
+  console.log(`${i} : ${acc}`);
+  return acc + cur;
+}, 0);
+
+console.log(accountTotal);
+
+console.log(AM.arr1);
+console.log(AM.combinedArr1Arr2);
+
+AM.combinedArr1Arr2.toString();
+console.log(AM.combinedArr1Arr2);
