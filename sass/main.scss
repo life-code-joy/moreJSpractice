@@ -10,25 +10,68 @@
 body {
   font-family: inherit;
   background-color: $main-color;
+  height: 100vh;
 }
 .nav {
   @include grid(repeat(4, 1fr), 4fr);
   @include style-one(2rem, 0, $main-color, 0);
   color: rgb(216, 216, 216);
-  justify-content: center;
-  align-content: center;
+  justify-items: center;
+  align-items: center;
+  li {
+    list-style: none;
+    a {
+      text-decoration: none;
+    }
+  }
 }
+
 .header {
   h2 {
-    padding: 2rem;
+    padding: 1rem;
+    text-align: center;
+    background-color: rgb(233, 86, 28);
   }
-  div {
-    @include grid(repeat(4, 1fr), 4fr);
+  .content {
+    @include grid(repeat(2, 1fr), 2);
+    min-height: 6rem;
+    text-align: center;
+    grid-gap: 10px;
+    border: 2px solid #eee;
+    .stuff {
+      padding: 15px;
+    }
+    .one {
+      background-color: rgb(47, 209, 47);
+    }
+    .two {
+      background-color: rgb(139, 173, 236);
+    }
+    .three {
+      background-color: rgb(240, 83, 143);
+    }
+    .four {
+      background-color: rgb(216, 219, 20);
+    }
   }
 }
 .aside {
-  @include grid(repeat(4, 1fr), 4fr);
+  background-color: rgb(241, 81, 161);
+  text-align: center;
+
+  h3 {
+    background-color: #fff;
+    align-self: center;
+  }
+  p {
+    background-color: rgb(226, 53, 53);
+  }
+  .asidep {
+    @include grid(repeat(2, 1fr), 2);
+    padding: 10px;
+  }
 }
 .footer {
-  @include grid(repeat(4, 1fr), 4fr);
+  background-color: rgb(58, 58, 58);
+  color: rgb(216, 216, 216);
 }
